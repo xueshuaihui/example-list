@@ -1,5 +1,5 @@
 import './App.css';
-import Getdom from './list/props/parent';
+import Getdom from './list/props/useContext';
 
 const App = () => {
   return (
