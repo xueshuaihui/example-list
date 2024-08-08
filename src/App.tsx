@@ -1,5 +1,5 @@
 import './App.css';
-import Getdom from './list/useEffect/hooks';
+import Getdom from './list/redux/index';
 
 const App = () => {
   return (
