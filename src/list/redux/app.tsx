@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { increment, decrement } from './store/modules/countStore'
 interface State {
   countStore: {
@@ -7,11 +7,12 @@ interface State {
 }
 export default () => {
   const { count } = useSelector((state: State) => state.countStore)
+  const dispatch = useDispatch()
   return (
     <div>
-      <button onClick={()=> decrement}>-</button>
+      <button onClick={()=> { dispatch(decrement()) }}>-</button>
       {count}
-      <button onClick={() => {increment()}}>+</button>
+      <button onClick={() => {dispatch(increment())}}>+</button>
     </div>
   )
 }
