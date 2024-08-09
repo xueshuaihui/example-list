@@ -1,14 +1,18 @@
 import { useSelector } from 'react-redux'
-import { increment, decrement } from '@/list/redux/store/modules/countStore.ts'
-
+import { increment, decrement } from './store/modules/countStore'
+interface State {
+  countStore: {
+    count: number
+  }
+}
 export default () => {
-  const {count} = useSelector(state => state.countStore
-  )
+  const { count } = useSelector((state: State) => state.countStore)
   return (
     <div>
-      <button>-</button>
+      <button onClick={()=> decrement}>-</button>
       {count}
-      <button >+</button>
+      <button onClick={() => {increment()}}>+</button>
     </div>
   )
 }
+

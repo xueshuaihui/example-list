@@ -12,6 +12,7 @@ const countStore = createSlice({
   reducers: {
     // 定义 increment reducer，用于增加 count 状态值
     increment(state) {
+      alert(1)
       state.count++;
     },
     // 定义 decrement reducer，用于减少 count 状态值
