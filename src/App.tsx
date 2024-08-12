@@ -1,5 +1,5 @@
 import './App.css';
-import Getdom from './list/redux/index';
+import Getdom from './list/router/index';
 
 const App = () => {
   return (
